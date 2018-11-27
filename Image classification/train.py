@@ -34,5 +34,6 @@ trainloaders, validloaders, testloaders, train_datasets = model_file.loading_dat
 model = models.densenet121(pretrained=True)
 model, optimizer, criterion = model_file.model_setup(model, structure, dropout_ratio, hidden_layer1)
 model_file.train_network( model, criterion, optimizer, trainloaders,validloaders, epochs, print_every)
-model_file.save_checkpoint(path, model, train_datasets)
+model_file.save_checkpoint(path, model, train_datasets)  
 print("model has been trained")
+
